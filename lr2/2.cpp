@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <float.h>
+#include <locale.h>
 #define N 5
 
 using namespace std;
@@ -32,6 +33,7 @@ float getSumLowUpTriangleMatrix(float m[N][N]);         // Функция для
 float getClosestToAverageMatrix(float m[N][N]);         // Функция для получения элемента матрицы, наиболее близкого к среднему арифметическому элементов матрицы
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
 
     float m[N][N];
     int i, j;

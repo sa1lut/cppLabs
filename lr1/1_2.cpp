@@ -1,8 +1,10 @@
 #define PR(x) printf("x=%u, *x=%d, &x=%u\n", x, *x, &x)
 #define PR_double(x) printf("x=%u, *x=%e, &x=%u\n", x, *x, &x)
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
 
     printf("Указатели на целые числа:\n");
     int mas[] = {100, 200, 300};

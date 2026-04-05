@@ -1,4 +1,5 @@
 #include <iostream>
+#include <locale.h>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ void printArray(int arr[], int n) {
 }
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
     int N = 10;
     int arr[N];
     for (int i = 0; i < N; i++) {

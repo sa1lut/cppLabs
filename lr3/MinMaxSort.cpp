@@ -1,9 +1,12 @@
 #include <iostream>
 #include <conio.h>
+#include <locale.h>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
+
     int mas[] = {2, 5, -8, 1, -4, 6, 3, -5, -9, 13, 0, 4, 9};
     // текущие индексы мин. и макс. элементов
     int imin, imax;

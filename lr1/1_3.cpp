@@ -1,8 +1,11 @@
 #include <iostream>
+#include <locale.h>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
+
     int a = 2, b = 5;
 
     void obmen1(int, int);

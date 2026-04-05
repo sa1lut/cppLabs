@@ -1,8 +1,11 @@
 #include <iostream>
+#include <locale.h>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8"); 
+
     // Объявление переменных и функции
     int i, k, degreeBase;
     int power(int, int);
