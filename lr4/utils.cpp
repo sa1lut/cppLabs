@@ -1,7 +1,7 @@
 #include "utils.h"
 
 // Функция для определения длины строки через индексирование
-int dlina1(char *str) {
+int dlina1(const char *str) {
     int length = 0;
     while (str[length] != '\0') {
         length++;
@@ -10,8 +10,8 @@ int dlina1(char *str) {
 }
 
 // Функция для определения длины строки через указатели
-int dlina2(char *str) {
-    char *ptr = str;
+int dlina2(const char *str) {
+    const char *ptr = str;
     while (*ptr != '\0') {
         ptr++;
     }
@@ -19,7 +19,7 @@ int dlina2(char *str) {
 }
 
 // Функция для определения длины строки через рекурсию
-int dlina3(char *str) {
+int dlina3(const char *str) {
     if (*str == '\0') {
         return 0;
     }
@@ -27,7 +27,7 @@ int dlina3(char *str) {
 }
 
 // Функция для копирования строки
-void kopir(char *dest, char *src) {
+void kopir(char *dest, const char *src) {
     while (*src != '\0') {
         *dest = *src;
         dest++;
@@ -37,7 +37,7 @@ void kopir(char *dest, char *src) {
 }
 
 // Функция для сравнения строк
-int sravn(char *str1, char *str2) {
+int sravn(const char *str1, const char *str2) {
     while (*str1 && (*str1 == *str2)) {
         str1++;
         str2++;
@@ -46,7 +46,7 @@ int sravn(char *str1, char *str2) {
 }
 
 // Функция для конкатенации строк
-char* konkat(char *str1, char *str2) {
+char* konkat(const char *str1, const char *str2) {
     char *result = new char[dlina1(str1) + dlina1(str2) + 1]; // Выделяем память для новой строки
     char *ptr = result;
 
